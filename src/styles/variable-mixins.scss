@@ -1,0 +1,9 @@
+$white: #ffffff;
+$light-gray: #f6f6f6;
+$light-blue: #1d7abc;
+$gray: #696969;
+
+@mixin square($side) {
+    width: $side;
+    height: $side;
+}

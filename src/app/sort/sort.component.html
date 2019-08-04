@@ -1,0 +1,7 @@
+<select class="sort-select" [formControl]="sortControl">
+  <option value="" selected disabled>Select Sort</option>
+  <option [value]="options.NAME_ASC">Name (A - Z)</option>
+  <option [value]="options.NAME_DESC">Name (Z - A)</option>
+  <option [value]="options.RANK_ASC">Rank <span>&#8593;</span></option>
+  <option [value]="options.RANK_DESC">Rank <span>&#8595;</span></option>
+</select>

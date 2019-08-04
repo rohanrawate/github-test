@@ -1,5 +1,5 @@
 export interface SearchParams {
     name: string;
-    page?: string;
-    per_page?: string;
+    page?: number;
+    per_page?: number;
 }

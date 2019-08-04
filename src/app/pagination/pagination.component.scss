@@ -1,0 +1,14 @@
+.num-btn{
+    border: none;
+    background: #f6f6f6;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.num-btn[disabled] {
+    cursor: not-allowed;
+ }
+
+.active-page{
+    color: #1d7abc;
+}

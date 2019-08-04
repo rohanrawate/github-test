@@ -1,0 +1,16 @@
+<gt-header [filterControl]="searchText" [sortControl]="sortControl"></gt-header>
+<div class="landing-container flex flex-column">
+    <div class="total-count">Total Result : {{total}}</div>
+    <div class="users-container">
+        <ng-container *ngFor="let user of users | sort: sortFilterValue">
+            <gt-user-card [user]="user"></gt-user-card>
+        </ng-container>
+        <div *ngIf="users.length === 0" class="no-result flex items-center justify-center"> 
+            Search above to get results
+        </div>
+    </div>
+    <div class="pagination-container flex">
+        <gt-pagination [page]="pageChange$ | async" [perPage]="perPage" [count]="total" (selectPage)="pageChange($event)"></gt-pagination>
+    </div>
+</div>
+

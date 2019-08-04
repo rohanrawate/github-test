@@ -1,3 +1,29 @@
-<p>
-  user-card works!
-</p>
+<div [@slideDown]="showDetails" class="user-card">
+  <div class="user-info flex">
+    <div class="user-image">
+        <img [src]="user.avatar_url">
+      </div>
+      <div class="user-details flex w-100">
+        <div class="basic-info w-100">
+            <div class="user-name">{{user?.login}}</div> 
+            <div class="profile-url">Profile URL: {{user?.html_url}}</div> 
+            <div>Score: {{user?.score}}</div>
+            <div>Type: {{user?.type}}</div>
+        </div>
+        <button class="btn detail-btn" (click)="showInfo()">
+          <span *ngIf="showDetails === 'hide'">Details</span>
+          <span *ngIf="showDetails !== 'hide'">Collapse</span>  
+        </button>
+      </div>
+  </div>
+<hr class="hr-line">
+  <div [@showHideDiv]="showDetails" *ngIf="showDetails !== 'hide'" class="repo-info">
+    <ng-container *ngFor="let repo of userRepo">
+      <div class="flex row items-center">
+        <div class="w-50 flex justify-center">{{repo?.name}}</div>
+        <div class="w-50 flex justify-center">{{repo?.language}}</div>
+      </div>
+    </ng-container>
+  </div>
+  
+</div>

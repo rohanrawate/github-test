@@ -1,0 +1,61 @@
+@import '../../styles/variable-mixins.scss';
+
+.user-card{
+    margin: 20px 2px;
+    min-height: 130px;
+    background-color: $white;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    
+    .user-image{
+        @include square(90px);
+        clip-path: circle(40%);
+        img{
+            @include square(90px);
+        }
+    }
+
+    .hr-line{
+        margin-top: 20px;
+        opacity: 0.3;
+    }
+
+    .user-details{
+        justify-content: space-between;
+
+        .basic-info{
+            padding: 15px 0 0 10px;
+            font-size: 14px;
+            color: $gray;
+
+            .user-name{
+                font-size: 24px;
+                color: black;
+            }
+    
+            .profile-url{
+                margin: 5px 0;
+            }
+        }
+
+        .detail-btn{
+            margin: 80px 20px 0 0;
+        }  
+    }
+
+    .repo-info{
+        height: 150px;
+        overflow-y: auto;
+
+        .row{
+            height: 30px;
+            height: 30px;
+            justify-content: space-between;
+        }
+
+        .row:nth-child( even ) {
+            background-color: $light-gray;
+        }
+    }    
+    
+}
+

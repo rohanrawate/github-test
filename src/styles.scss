@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './styles/variable-mixins.scss';
+
+@font-face {
+  font-family: lato;
+  src: url(assets/Lato/Lato-Regular.ttf);
+}
+
+* {
+  font-family: 'lato', 'arial', sans-serif;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+ul,
+li,
+label,
+footer,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  background-color: #f6f6f6;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.w-50{
+  width: 50%;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.btn{
+  height: 30px;
+  min-width: 100px;
+  background-color: $white;
+  border: 1px solid $light-blue;
+  border-radius: 4px;
+  color: $light-blue;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 0px 3px -1px $light-blue, 0 0px 1px 0 $light-blue, 0 1px 3px 0 $light-blue;  
+}

@@ -1,0 +1,34 @@
+@import '../../styles/variable-mixins.scss';
+
+.landing-container{
+    width: 50%;
+    margin: 0 auto;
+    overflow: visible;
+
+    .total-count{
+        padding: 10px 0;
+        position: sticky;
+        top: 60px;
+        background: $light-gray;
+        z-index: 1;
+    }
+    
+    .users-container{
+        // height: calc(100vh - 120px);
+        // overflow-y: auto;
+        .no-result{
+            height: 60vh;
+        }
+    }
+
+    .pagination-container{
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .landing-container{
+        width: 70%;
+    }
+}
+

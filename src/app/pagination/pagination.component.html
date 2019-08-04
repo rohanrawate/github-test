@@ -1,0 +1,11 @@
+<div class="pagination" *ngIf="count > 0">
+  <button class="num-btn" (click)="onPage(1)" [disabled]="page === 1">&#171;</button>
+  <button class="num-btn" (click)="onPrev()" [disabled]="page === 1">&#8249;</button>
+
+  <button [className]="page === pageNum ? 'active-page num-btn' : 'num-btn'" *ngFor="let pageNum of getPages()" (click)="onPage(pageNum)">{{pageNum}}</button>
+  <button class="num-btn" (click)="onNext()" [disabled]="lastPage()">&#8250;</button>
+ 
+  <button class="num-btn" (click)="onPage(totalPages())" [disabled]="lastPage()">&#187;</button>
+ 
+  <span>{{ totalPages() }} pages</span>
+</div>
